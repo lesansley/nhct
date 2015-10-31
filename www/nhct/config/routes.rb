@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :survey_results
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
