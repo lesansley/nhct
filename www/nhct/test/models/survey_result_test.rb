@@ -27,6 +27,15 @@ class SurveyResultTest < ActiveSupport::TestCase
     assert_not surveyResult.save, "Saved surveyResult without surveyDate"
   end
 
+  test "Should not save surveyResult if surveyDate is in the future" do
+  	surveyResult = SurveyResult.new
+  	surveyResult.patientIdentifier = 'abc'
+  	surveyResult.operationCode = '1'
+  	surveyResult.operationDate = 4
+  	assert_operator surveyResult.operationDate, :<=, 6, "Saved surveyResult with surveyDate in the future"
+  end
+
+
   test "Should not save surveyResult without surveyResult" do
   	surveyResult = SurveyResult.new
   	surveyResult.patientIdentifier = 'abc'
