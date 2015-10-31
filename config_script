@@ -1,0 +1,13 @@
+sudo apt-get update
+sudo apt-get install ruby-full build-essential
+sudo apt-get install build-essential libopenssl-ruby1.9.1 libssl-dev zlib1g-dev libmysqlclient-dev libpcre3-dev libcurl4-openssl-dev mysql-client-core-5.5 openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison nodejs subversion apache2 apache2-mpm-prefork apache2-prefork-dev libapache2-mod-passenger
+
+sudo gem install rails
+
+cd /home/ubuntu
+git clone https://github.com/lesansley/nhct.git
+
+cd /home/ubuntu/nhct/www
+rails new nhct
+sudo gem install passenger
+sudo gem install dotenv
