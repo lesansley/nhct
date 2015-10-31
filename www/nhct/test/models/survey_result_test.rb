@@ -42,7 +42,7 @@ class SurveyResultTest < ActiveSupport::TestCase
   	surveyResult.operationCode = '1'
   	surveyResult.operationDate = '01/01/2001'
   	surveyResult.surveyDate = '01/01/2001'
-    assert_not surveyResult.save, "Saved surveyResult without surveyDate"
+    assert_not surveyResult.save, "Saved surveyResult without surveyResult"
   end
 
 end
