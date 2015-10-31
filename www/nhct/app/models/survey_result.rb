@@ -3,4 +3,5 @@ class SurveyResult < ActiveRecord::Base
 	validates :operationCode, presence: true
 	validates :operationDate, presence: true
 	validates :surveyDate, presence: true
+	validates :surveyResult, presence: true
 end
