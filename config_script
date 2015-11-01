@@ -12,5 +12,5 @@ rails new nhct
 sudo gem install passenger
 sudo gem install dotenv
 
-cd /home/ubuntu/www/nhct
+cd /home/ubuntu/nhct/www/nhct
 bundle install
