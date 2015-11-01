@@ -1,5 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Select a patient</h1>
+
+
+<%= form_tag do %>
+
+  <div class="field">
+    <%= collection_select(:survey_result, :patientIdentifier, @survey_results, 'patientIdentifier', 'patientIdentifier')%>
+  </div>
+  <div class="actions">
+    <input name="next" type="submit" value="Next" />
+  </div>
+<% end %>
+
 <h1>Listing Survey Results</h1>
 
 <table>
