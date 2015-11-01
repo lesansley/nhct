@@ -1,9 +1,4 @@
 class SurveyResult < ActiveRecord::Base
-	validates :patientIdentifier, presence: true
-	validates :operationCode, presence: true
-	validates :operationDate, presence: true
-	validates :surveyDate, presence: true
-	validates :surveyResult, presence: true
+	validates_presence_of :patientIdentifier, :operationCode, :operationDate, :surveyDate, :surveyResult
 	validates :surveyDate, :timeliness => {:on_or_before => lambda { Date.current }, :type => :date}
-	
 end
