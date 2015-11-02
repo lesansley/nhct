@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Step 1:</h1>
+
+Select a patient
+<%= form_tag do %>
+  <div class="field">
+    <%= collection_select(:id, :id, @patients, 'id', 'PatientIdentifier')%>
+  </div>
+  <div class="actions">
+    <input name="next" type="submit" value="Next" />
+  </div>
+<% end %>
+
+
+<br>
+
+Or create a <%= link_to 'New Patient', new_patient_path %>

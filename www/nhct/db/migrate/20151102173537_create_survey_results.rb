@@ -1,11 +1,9 @@
 class CreateSurveyResults < ActiveRecord::Migration
   def change
     create_table :survey_results do |t|
-      t.string :patientIdentifier
-      t.integer :operationCode
-      t.date :operationDate
-      t.date :surveyDate
-      t.integer :surveyResult
+      t.integer :ResultValue
+      t.date :SurveyDate
+      t.references :operation, index: true, foreign_key: true
 
       t.timestamps null: false
     end
