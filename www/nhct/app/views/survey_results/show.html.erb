@@ -1,28 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Patientidentifier:</strong>
-  <%= @survey_result.patientIdentifier %>
-</p>
-
-<p>
-  <strong>Operationcode:</strong>
-  <%= @survey_result.operationCode %>
-</p>
-
-<p>
-  <strong>Operationdate:</strong>
-  <%= @survey_result.operationDate %>
+  <strong>Resultvalue:</strong>
+  <%= @survey_result.ResultValue %>
 </p>
 
 <p>
   <strong>Surveydate:</strong>
-  <%= @survey_result.surveyDate %>
+  <%= @survey_result.SurveyDate %>
 </p>
 
 <p>
-  <strong>Surveyresult:</strong>
-  <%= @survey_result.surveyResult %>
+  <strong>Operation:</strong>
+  <%= @survey_result.operation %>
 </p>
 
 <%= link_to 'Edit', edit_survey_result_path(@survey_result) %> |

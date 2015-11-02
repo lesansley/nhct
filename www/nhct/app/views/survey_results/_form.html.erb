@@ -12,26 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :patientIdentifier %><br>
-    <%= f.text_field :patientIdentifier %>
+    <%= f.label :ResultValue %><br>
+    <%= f.number_field :ResultValue %>
   </div>
   <div class="field">
-    <%= f.label :operationCode %><br>
-    <%= f.text_field :operationCode %>
+    <%= f.label :SurveyDate %><br>
+    <%= f.date_select :SurveyDate %>
   </div>
   <div class="field">
-    <%= f.label :operationDate %><br>
-    <%= f.date_select :operationDate %>
-  </div>
-  <div class="field">
-    <%= f.label :surveyDate %><br>
-    <%= f.date_select :surveyDate %>
-  </div>
-  <div class="field">
-    <%= f.label :surveyResult %><br>
-    <%= f.text_field :surveyResult %>
+    <%= f.label :operation_id %><br>
+    <%= f.text_field :operation_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Finish" %>
   </div>
 <% end %>

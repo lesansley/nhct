@@ -1,28 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Select a patient</h1>
-
-
-<%= form_tag do %>
-
-  <div class="field">
-    <%= collection_select(:survey_result, :patientIdentifier, @survey_results, 'patientIdentifier', 'patientIdentifier')%>
-  </div>
-  <div class="actions">
-    <input name="next" type="submit" value="Next" />
-  </div>
-<% end %>
-
 <h1>Listing Survey Results</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Patientidentifier</th>
-      <th>Operationcode</th>
-      <th>Operationdate</th>
+      <th>Resultvalue</th>
       <th>Surveydate</th>
-      <th>Surveyresult</th>
+      <th>Operation</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,11 +15,9 @@
   <tbody>
     <% @survey_results.each do |survey_result| %>
       <tr>
-        <td><%= survey_result.patientIdentifier %></td>
-        <td><%= survey_result.operationCode %></td>
-        <td><%= survey_result.operationDate %></td>
-        <td><%= survey_result.surveyDate %></td>
-        <td><%= survey_result.surveyResult %></td>
+        <td><%= survey_result.ResultValue %></td>
+        <td><%= survey_result.SurveyDate %></td>
+        <td><%= survey_result.operation %></td>
         <td><%= link_to 'Show', survey_result %></td>
         <td><%= link_to 'Edit', edit_survey_result_path(survey_result) %></td>
         <td><%= link_to 'Destroy', survey_result, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,15 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  patientIdentifier: MyString
-  operationCode: 
-  operationDate: 2015-10-31
-  surveyDate: 2015-10-31
-  surveyResult: 
+  ResultValue: 1
+  SurveyDate: 2015-11-02
+  operation_id: 
 
 two:
-  patientIdentifier: MyString
-  operationCode: 
-  operationDate: 2015-10-31
-  surveyDate: 2015-10-31
-  surveyResult: 
+  ResultValue: 1
+  SurveyDate: 2015-11-02
+  operation_id: 

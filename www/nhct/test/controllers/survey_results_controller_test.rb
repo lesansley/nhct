@@ -18,7 +18,7 @@ class SurveyResultsControllerTest < ActionController::TestCase
 
   test "should create survey_result" do
     assert_difference('SurveyResult.count') do
-      post :create, survey_result: { operationCode: @survey_result.operationCode, operationDate: @survey_result.operationDate, patientIdentifier: @survey_result.patientIdentifier, surveyDate: @survey_result.surveyDate, surveyResult: @survey_result.surveyResult }
+      post :create, survey_result: { ResultValue: @survey_result.ResultValue, SurveyDate: @survey_result.SurveyDate, operation_id: @survey_result.operation_id }
     end
 
     assert_redirected_to survey_result_path(assigns(:survey_result))
@@ -35,7 +35,7 @@ class SurveyResultsControllerTest < ActionController::TestCase
   end
 
   test "should update survey_result" do
-    patch :update, id: @survey_result, survey_result: { operationCode: @survey_result.operationCode, operationDate: @survey_result.operationDate, patientIdentifier: @survey_result.patientIdentifier, surveyDate: @survey_result.surveyDate, surveyResult: @survey_result.surveyResult }
+    patch :update, id: @survey_result, survey_result: { ResultValue: @survey_result.ResultValue, SurveyDate: @survey_result.SurveyDate, operation_id: @survey_result.operation_id }
     assert_redirected_to survey_result_path(assigns(:survey_result))
   end
 

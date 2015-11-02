@@ -14,7 +14,10 @@ class SurveyResultsController < ApplicationController
 
   # GET /survey_results/new
   def new
+    @operation = Operation.find(params[:operation_id])
+    @patient = Patient.find(@operation.patient_id)
     @survey_result = SurveyResult.new
+    @survey_result.operation_id = @operation.id
   end
 
   # GET /survey_results/1/edit
@@ -69,6 +72,6 @@ class SurveyResultsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def survey_result_params
-      params.require(:survey_result).permit(:patientIdentifier, :operationCode, :operationDate, :surveyDate, :surveyResult)
+      params.require(:survey_result).permit(:ResultValue, :SurveyDate, :operation_id)
     end
 end
