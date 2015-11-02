@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  OperationCode: 1
+  OperationDate: 2015-11-02
+  patient_id: 
+
+two:
+  OperationCode: 1
+  OperationDate: 2015-11-02
+  patient_id: 
